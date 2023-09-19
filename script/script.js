@@ -4,6 +4,7 @@
 const container = document.querySelector('.c-container')
 let arrBomb = []
 let c;
+let bombRandom;
 
 // 2. Creare un ciclo al quale collegare gli elementi da creare (da aggiungere a funzione).
 function createCells (numCell) {
@@ -15,6 +16,8 @@ function createCells (numCell) {
     cell.addEventListener ('click', function () {
       let classAdded = this.classList.add ('clicked')
       console.log(i);
+      let bombFound = arrBomb.includes([i])
+      console.log(bombFound);
     })
   }
 }
@@ -22,10 +25,11 @@ function createCells (numCell) {
 const button = document.getElementById('button')
 button.addEventListener('click', function(){
   container.innerHTML = ``
+  // al click del bottone faccio ritornare l'indice c a 1 e svuoto l'array
   c = 1;
   arrBomb = [];
+  // parte la funzione della selezione della difficoltà
   difficulty();
-  // 6. Creare un ciclo che, al click del bottone avvia, indicizzi le 16 bombe inserendole in un array senza ripetere il numero che indicizza
   console.log(arrBomb);
 })
 
@@ -34,9 +38,12 @@ function difficulty (){
   const select = document.getElementById ('difficulty').value
   console.log(select);
   
+  // a seconda della scelta nel select la funzione stampa il numero giusto di quadrati e manda all'array i valori delle bombe
   if (select == 1){
+    // numero di celle
     createCells(100);
     while (c<=16) {
+      // bombe casuali
       bombRandom = randomBomb(100)
       if (!arrBomb.includes(bombRandom)){
         arrBomb.push (bombRandom)
@@ -67,10 +74,7 @@ function difficulty (){
   }
 }
 
+// funzione numero random 
 function randomBomb(max) {
   return Math.ceil(Math.random() * max);
 }
-
- 
- 
-

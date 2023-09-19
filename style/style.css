@@ -44,5 +44,9 @@
 }
 
 .clicked {
+  background-color: yellow;
+}
+
+.bomb {
   background-color: red;
 }
