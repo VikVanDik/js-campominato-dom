@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. Creare il markup html e lo stile da usare come base per lo script. */
+
+.c-container {
+  width: 500px;
+  height: 500px;
+  background-color: aquamarine;
+  margin: 50px auto;
+}
+
+.cell-100 {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  background-color: blue;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-81 {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  background-color: blue;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-49 {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  background-color: blue;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clicked {
+  background-color: red;
+}
