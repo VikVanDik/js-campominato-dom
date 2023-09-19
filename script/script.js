@@ -5,6 +5,7 @@ const container = document.querySelector('.c-container')
 let arrBomb = []
 let c;
 let bombRandom;
+let counter = 0
 
 // 2. Creare un ciclo al quale collegare gli elementi da creare (da aggiungere a funzione).
 function createCells (numCell) {
@@ -14,10 +15,20 @@ function createCells (numCell) {
     cell.classList.add(`cell-${numCell}`)
     container.append(cell);
     cell.addEventListener ('click', function () {
-      let classAdded = this.classList.add ('clicked')
+      // Se l'array include l'indice la cella è una bomba
+      if (arrBomb.includes(i)) {
+        let bombExploded = this.classList.add ('bomb')
+      // Altrimenti è una cella normale  
+      } else {
+        let classAdded = this.classList.add ('clicked')
+        counter++
+      }
+      console.log(counter);
       console.log(i);
-      let bombFound = arrBomb.includes([i])
+      let bombFound = arrBomb.includes(i)
+
       console.log(bombFound);
+      console.log(i);
     })
   }
 }
@@ -72,6 +83,11 @@ function difficulty (){
       console.log(bombRandom);
     }
   }
+}
+
+// funzione per rimuovere l'event listener 
+function removeEvent (cell){
+  cell.removeEventListener ('click' )
 }
 
 // funzione numero random 
