@@ -61,7 +61,7 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 buon lavoro!
 
-1. Creare un ciclo che, al click del bottone avvia, indicizzi le 16 bombe inserendole in un array senza ripetere il numero che indicizza
-2. Confrontare, al click dell'utente, il numero della cella con i numeri presenti nell'array delle bombe, se è presente il gioco termina.
+6. Creare un ciclo che, al click del bottone avvia, indicizzi le 16 bombe inserendole in un array senza ripetere il numero che indicizza
+7. Confrontare, al click dell'utente, il numero della cella con i numeri presenti nell'array delle bombe, se è presente il gioco termina.
 Il gioco termina anche quando non sono più presenti celle che non sono bombe.
-3. A gioco terminato, inibire la griglia e colorare tutte le bombe, stampando in pagina il risultato. (numero di celle scovate)
+8. A gioco terminato, inibire la griglia e colorare tutte le bombe, stampando in pagina il risultato. (numero di celle scovate)
