@@ -12,12 +12,6 @@ function createCells (numCell) {
     container.append(cell);
     cell.addEventListener ('click', function () {
       let classAdded = this.classList.add ('clicked')
-
-      if (classAdded) {
-        cell.innerHTML = [i]
-      } else {
-        cell.innerHTML = ``
-      }
       console.log([i]);
     })
   }
